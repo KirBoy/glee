@@ -1,49 +1,69 @@
-html{
-  box-sizing: border-box;
+@font-face {
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: local('DMSans-Regular'), 
+    url('../fonts/DMSans-Regular.woff2') format('woff2'),
+    url('../fonts/DMSans-Regular.woff') format('woff');
+    font-display: swap;
 }
 
-*,
-*::after,
-*::before{
-  box-sizing: inherit;
+@font-face {
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  src: local('DMSans-Medium'), 
+    url('../fonts/DMSans-Medium.woff2') format('woff2'),
+    url('../fonts/DMSans-Medium.woff') format('woff');
+    font-display: swap;
 }
 
-ul[class],
-ol[class] {
-  padding: 0;
+@font-face {
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: local('DMSans-Bold'), 
+    url('../fonts/DMSans-Bold.woff2') format('woff2'),
+    url('../fonts/DMSans-Bold.woff') format('woff');
+    font-display: swap;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
+@font-face {
+  font-family: 'Poppins-ExtraBold', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  src: local('Poppins-ExtraBold'), 
+    url('../fonts/Poppins-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Poppins-ExtraBold.woff') format('woff');
+    font-display: swap;
 }
 
-ul[class] {
-  list-style: none;
+@font-face {
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  src: local('Rubik-Medium'), 
+    url('../fonts/Rubik-Medium.woff2') format('woff2'),
+    url('../fonts/Rubik-Medium.woff') format('woff');
+    font-display: swap;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+@font-face {
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: local('Rubik-Regular'), 
+    url('../fonts/Rubik-Regular.woff2') format('woff2'),
+    url('../fonts/Rubik-Regular.woff') format('woff');
+    font-display: swap;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
+@font-face {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: local('Rubik-Bold'), 
+    url('../fonts/Rubik-Medium.woff2') format('woff2'),
+    url('../fonts/Rubik-Bold.woff') format('woff');
+    font-display: swap;
 }

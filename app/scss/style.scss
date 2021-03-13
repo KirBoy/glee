@@ -1,8 +1,127 @@
-@import 'vars';
-@import 'fonts';
-@import 'rese';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+// Header
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    padding-right: 10px;
+  }
+
+  &__text {
+    font-size: 36px;
+    color: rgb(67, 99, 114);
+  }
+}
 
 
+.menu__list {
+  display: flex;
+}
 
-@import 'media';
+.menu__link {
+  text-decoration: none;
+  color: $menu-color;
+  @extend %rubik-500;
+}
+
+.user {
+  display: flex;
+}
+
+.user__item {
+  margin-right: 20px;
+  position: relative;
+}
+
+.user__link{
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+
+.user--search::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/searchicon.png);
+  z-index: 2;
+  width: 16px;
+  height: 16px;
+  top: 33%;
+  left: 35%;
+}
+
+// Figure
+.user--figure {
+  background-color: $element-color;
+  width: 130px;
+  height: 51px;
+  position: relative;
+}
+
+.user--figure::before {
+  content: "";
+  position: absolute;
+  background-color: $element-color;
+  height: 51px;
+  width: 51px;
+  border-radius: 50%;
+  left: -24px;
+}
+
+.user--figure::after {
+  content: "";
+  position: absolute;
+  background-color: $element-color;
+  height: 51px;
+  width: 51px;
+  border-radius: 50%;
+  right: -24px;
+}
+
+.user--heart::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/hearticon.png);
+  z-index: 2;
+  width: 18px;
+  height: 17px;
+  top: 43%;
+  left: 13%;
+}
+
+.user--cart::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/carticon.png);
+  z-index: 2;
+  width: 19px;
+  height: 17px;
+  top: 41%;
+  left: 71%;
+}
+
+.user__num {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+
+@import "media";
