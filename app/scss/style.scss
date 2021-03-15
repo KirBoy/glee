@@ -9,71 +9,107 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 45px;
+  padding-bottom: 48px;
 }
 
 .logo {
   text-decoration: none;
   display: flex;
   align-items: center;
+  margin-right: 159px;
 
   &__icon {
     padding-right: 10px;
   }
 
   &__text {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
     font-size: 36px;
     color: rgb(67, 99, 114);
   }
 }
 
+.menu {
+  text-align: center;
+}
 
 .menu__list {
   display: flex;
 }
 
+.menu__item {
+  margin-right: 35px;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
+}
+
 .menu__link {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
   text-decoration: none;
   color: $menu-color;
-  @extend %rubik-500;
 }
 
 .user {
+  position: relative;
+  z-index: 2;
   display: flex;
+  justify-content: space-between;
 }
 
 .user__item {
-  margin-right: 20px;
-  position: relative;
-}
-
-.user__link{
-  height: 50px;
   width: 50px;
-  display: inline-block;
+  height: 50px;
+  border-radius: 50%;
 }
 
-
-.user--search::after {
-  position: absolute;
-  content: "";
-  background-image: url(../images/searchicon.png);
+.user__link {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
   z-index: 2;
+  top: 18px;
+  color: $user-color;
+  font-family: "Rubik", sans-serif;
+}
+
+.user__link:last-child {
+  margin-right: 0;
+}
+
+.user__num {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  position: absolute;
+  text-decoration: none;
   width: 16px;
   height: 16px;
-  top: 33%;
-  left: 35%;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  top: -5px;
+  right: -8px;
 }
 
 // Figure
-.user--figure {
+.user__figure {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
   background-color: $element-color;
   width: 130px;
   height: 51px;
   position: relative;
+  margin-right: 42px;
 }
 
-.user--figure::before {
+.user__figure::before {
   content: "";
   position: absolute;
   background-color: $element-color;
@@ -83,7 +119,7 @@
   left: -24px;
 }
 
-.user--figure::after {
+.user__figure::after {
   content: "";
   position: absolute;
   background-color: $element-color;
@@ -93,35 +129,186 @@
   right: -24px;
 }
 
-.user--heart::after {
+.fa-heart::after {
   position: absolute;
   content: "";
-  background-image: url(../images/hearticon.png);
-  z-index: 2;
-  width: 18px;
-  height: 17px;
-  top: 43%;
-  left: 13%;
+  background-image: url(../images/line-menu.svg);
+  z-index: 3;
+  width: 1px;
+  height: 32px;
+  right: -25px;
+  top: -10px;
 }
 
-.user--cart::after {
-  position: absolute;
-  content: "";
-  background-image: url(../images/carticon.png);
-  z-index: 2;
-  width: 19px;
-  height: 17px;
-  top: 41%;
-  left: 71%;
+.user--icon {
+  right: -16px;
+  top: 14px;
 }
 
-.user__num {
+.user--search {
+  background-color: #edf1f4;
+  margin-right: 47px;
+}
+
+.user--menu {
+  background-color: #a3bbc8;
+}
+
+.user__link path {
+  fill: #fff;
+}
+
+// Wrapper
+
+.wrapper {
+  &__inner {
+    position: relative;
+    height: 825px;
+    background-color: $element-color;
+    display: flex;
+    align-items: center;
+  }
+
+  &__inner::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    width: 634px;
+    height: 634px;
+    right: 10%;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__desc {
+  }
+
+  &__title {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 72px;
+    text-transform: uppercase;
+    color: $menu-color;
+    line-height: 0.972;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-family: "Rubik";
+    font-weight: 400;
+    color: rgb(67, 99, 114);
+    line-height: 1.667;
+    max-width: 370px;
+    margin-bottom: 40px;
+  }
+}
+
+.wrapper__desc .wrapper__btn {
+  font-family: "Rubik";
+  font-weight: 400;
+  color: #fff;
+  font-size: 15px;
+  background-color: $btn-color;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+}
+
+.slick-slider {
+  z-index: 2;
+}
+
+.slick-dots {
+  display: flex;
   position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
+  right: 44%;
+  bottom: -58%;
+}
+
+.slick-dots button {
+  font-family: "Rubik", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  background-color: #fde3cc;
+  border: none;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
+  margin-right: 12px;
 }
 
+.slick-active button {
+  background-color: #fff;
+}
+
+// Benifits
+
+.benifits {
+  &__inner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 33.33333%;
+    justify-content: center;
+    text-align: left;
+    background-color: #fef7f0;
+    height: 170px;
+    border-right: 1px solid #e8e4df;
+  }
+
+  &__item:last-child {
+    border-right: none;
+  }
+
+  &__content::after {
+    content: "";
+    position: absolute;
+    left: 18%;
+    top: 28%;
+  }
+
+  &--support::after {
+    background-image: url(../images/benefits/support.svg);
+    width: 50px;
+    height: 50px;
+  }
+
+  &--delivery::after {
+    background-image: url(../images/benefits/delivery.svg);
+    width: 49px;
+    height: 29px;
+    top: 37%;
+  }
+
+  &--secure::after {
+    background-image: url(../images/benefits/secure.svg);
+    width: 49px;
+    height: 44px;
+  }
+
+  &__title {
+    @extend %dmsans-500;
+    font-size: 18px;
+  }
+
+  &__text p {
+    max-width: 214px;
+  }
+}
 
 @import "media";

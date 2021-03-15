@@ -6,75 +6,189 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Glle. | Home Page</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rubik:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <main>
     <header class="header">
-      <div class="container">
+
+      <div class="container-outside">
         <div class="header__inner">
+
 
           <a class="logo" href="#">
             <img class="logo__icon" src="images/logo-icon.svg" alt="logo icon">
             <span class="logo__text">Glee.</span>
           </a>
 
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="#">Home
-                  <span class="menu__plus">+</span>
-                </a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">About</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Services</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Page
-                  <span class="menu__plus">+</span>
-                </a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">News</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Contc</a>
-              </li>
-            </ul>
-          </nav>
+          <div class="container">
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Home
+                    <span class="menu__plus">+</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">About</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Services</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Page
+                    <span class="menu__plus">+</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">News</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Contac</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
 
           <ul class="user">
-            <!-- <li class="user__item">
-            <a class="user__link user--search" href="#"></a>
-          </li> -->
-            <li class="user__item user--figure">
-              <a class="user__link user--heart" href="#">
+            <li class="user__item user--search">
+              <a class="user__link user--icon" href="#">
+                <i class="fas fa-search"></i>
+              </a>
+            </li>
+            <li class="user__figure">
+              <a class="user__link" href="#">
+                <i class="far fa-heart"></i>
                 <span class="user__num">0</span>
               </a>
-              <a class="user__link user--cart" href="#">
+              <a class="user__link" href="#">
+                <i class="fas fa-shopping-cart"></i>
                 <span class="user__num">0</span>
               </a>
             </li>
-            <!-- <li class="user__item user--item">
-            <a class="user__link" href="#">
-              <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="20.03" height="20.031"
-                viewBox="0 0 20.03 20.031">
-                <path fill="#fff;" fill-rule="evenodd;"
-                  d="M1813.15,67.881a2.146,2.146,0,1,1,2.14-2.145A2.145,2.145,0,0,1,1813.15,67.881Zm0,7.869a2.146,2.146,0,1,1,2.14-2.147A2.146,2.146,0,0,1,1813.15,75.75Zm0,7.868a2.146,2.146,0,1,1,2.14-2.146A2.145,2.145,0,0,1,1813.15,83.618Zm7.86-15.737a2.146,2.146,0,1,1,2.15-2.145A2.143,2.143,0,0,1,1821.01,67.881Zm0,7.869a2.146,2.146,0,1,1,2.15-2.147A2.144,2.144,0,0,1,1821.01,75.75Zm0,7.868a2.146,2.146,0,1,1,2.15-2.146A2.143,2.143,0,0,1,1821.01,83.618Zm7.87-15.737a2.146,2.146,0,1,1,2.15-2.145A2.143,2.143,0,0,1,1828.88,67.881Zm0,7.869a2.146,2.146,0,1,1,2.15-2.147A2.144,2.144,0,0,1,1828.88,75.75Zm0,7.868a2.146,2.146,0,1,1,2.15-2.146A2.143,2.143,0,0,1,1828.88,83.618Z"
-                  transform="translate(-1811 -63.594)" />
-              </svg>
-            </a>
-          </li> -->
+            <li class="user__item user--menu">
+              <a class="user__link user--icon" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20.03" height="20.031" viewBox="0 0 20.03 20.031">
+                  <path fill="#fff;" fill-rule="evenodd;"
+                    d="M1813.15,67.881a2.146,2.146,0,1,1,2.14-2.145A2.145,2.145,0,0,1,1813.15,67.881Zm0,7.869a2.146,2.146,0,1,1,2.14-2.147A2.146,2.146,0,0,1,1813.15,75.75Zm0,7.868a2.146,2.146,0,1,1,2.14-2.146A2.145,2.145,0,0,1,1813.15,83.618Zm7.86-15.737a2.146,2.146,0,1,1,2.15-2.145A2.143,2.143,0,0,1,1821.01,67.881Zm0,7.869a2.146,2.146,0,1,1,2.15-2.147A2.144,2.144,0,0,1,1821.01,75.75Zm0,7.868a2.146,2.146,0,1,1,2.15-2.146A2.143,2.143,0,0,1,1821.01,83.618Zm7.87-15.737a2.146,2.146,0,1,1,2.15-2.145A2.143,2.143,0,0,1,1828.88,67.881Zm0,7.869a2.146,2.146,0,1,1,2.15-2.147A2.144,2.144,0,0,1,1828.88,75.75Zm0,7.868a2.146,2.146,0,1,1,2.15-2.146A2.143,2.143,0,0,1,1828.88,83.618Z"
+                    transform="translate(-1811 -63.594)" />
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
+
     </header>
 
+    <section class="wrapper">
+      <div class="container-outside">
+        <div class="wrapper__inner">
+          <div class="container">
+            <div class="wrapper__slider">
+
+              <div class="wrapper__content">
+                <div class="wrapper__desc">
+                  <h1 class="wrapper__title">smart and trendy</h1>
+                  <p class="wrapper__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt
+                  </p>
+                  <button class="wrapper__btn button" type="button">Shop Now</button>
+                </div>
+                <img class="wrapper__photo" src="images/products/couch.png" alt="Main product">
+              </div>
+
+              <div class="wrapper__content">
+                <div class="wrapper__desc">
+                  <h1 class="wrapper__title">smart and trendy</h1>
+                  <p class="wrapper__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt
+                  </p>
+                  <button class="wrapper__btn button" type="button">Shop Now</button>
+                </div>
+                <img class="wrapper__photo" src="images/products/couch.png" alt="Main product">
+              </div>
+
+              <div class="wrapper__content">
+                <div class="wrapper__desc">
+                  <h1 class="wrapper__title">smart and trendy</h1>
+                  <p class="wrapper__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt
+                  </p>
+                  <button class="wrapper__btn button" type="button">Shop Now</button>
+                </div>
+                <img class="wrapper__photo" src="images/products/couch.png" alt="Main product">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="benefits">
+      <div class="container-outside">
+        <div class="benifits__inner">
+
+          <div class="benifits__item">
+            <div class="benifits__content  benifits--support">
+              <h2 class="benifits__title">Support 24/7.</h2>
+              <div class="benifits__text">
+                <p>Contact us 24 hours a day, 7 days a week.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="benifits__item">
+            <div class="benifits__content benifits--delivery">
+              <h2 class="benifits__title">Delivery</h2>
+              <div class="benifits__text">
+                <p>Free shipping on all US order.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="benifits__item">
+            <div class="benifits__content benifits--secure">
+              <h2 class="benifits__title">100% Payment secure.</h2>
+              <div class="benifits__text">
+                <p>We ensure secure payment with PEV.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
     <script src="https://kit.fontawesome.com/81cebf47af.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
   </main>
 </body>
 
