@@ -1,6 +1,5 @@
 body {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
+  @extend %dmsans-500;
   font-size: 16px;
   color: #585858;
   line-height: 1.875;
@@ -18,14 +17,17 @@ body {
 }
 
 .button {
+  display: block;
   position: relative;
-  padding: 0;
   border: 0;
   background-color: transparent;
-  width: 200px;
-  height: 60px;
+  max-width: 200px;
+  width: 100%;
+  padding: 16px 0 16px 30px;
   text-align: left;
-  padding-left: 30px;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+  outline: transparent;
 }
 
 .button::after {
@@ -36,4 +38,74 @@ body {
   height: 9px;
   right: 19px;
   top: 27px;
+}
+
+main .button:focus {
+  background-color: $focus-color;
+}
+
+main .button:hover {
+  color: #fcd7b6;
+  background-color: #243f4d;
+}
+
+main .button:active {
+  color: #fcd7b6;
+  background-color: red;
+}
+
+.title {
+  @extend %dmsans-700;
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 21px;
+  color: #191919;
+}
+.filter {
+
+  &__buttons {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  &__btn {
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    margin-right: 27px;
+    cursor: pointer;
+    outline: transparent;
+  }
+
+  &__btn:last-child {
+    margin-right: 0;
+  }
+
+  &__btn:focus {
+    color: $focus-color;
+  }
+
+  &__btn:hover {
+    color: #a3bbc8;
+  }
+
+  &__btn:active {
+    color: red;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
