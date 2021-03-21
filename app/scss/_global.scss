@@ -1,8 +1,9 @@
 body {
-  @extend %dmsans-500;
+  font-family: 'DMsans';
   font-size: 16px;
   color: #585858;
   line-height: 1.875;
+  background-color: #fff;
 }
 
 .container-outside {
@@ -12,15 +13,19 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .button {
   display: block;
   position: relative;
+  background-color: $btn-color;
+  font-family: 'Rubik';
+  font-weight: 400;
+  color: #fff;
   border: 0;
-  background-color: transparent;
   max-width: 200px;
   width: 100%;
   padding: 16px 0 16px 30px;
@@ -28,73 +33,56 @@ body {
   cursor: pointer;
   transition: color 0.3s, background-color 0.3s;
   outline: transparent;
-}
-
-.button::after {
-  position: absolute;
-  content: "";
-  background-image: url(../images/arrow-btn.svg);
-  width: 22px;
-  height: 9px;
-  right: 19px;
-  top: 27px;
-}
-
-main .button:focus {
-  background-color: $focus-color;
-}
-
-main .button:hover {
-  color: #fcd7b6;
-  background-color: #243f4d;
-}
-
-main .button:active {
-  color: #fcd7b6;
-  background-color: red;
+  text-decoration: none;
+  @extend%animation;
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/arrow-btn.svg);
+    width: 22px;
+    height: 9px;
+    right: 19px;
+    top: 27px;
+  }
 }
 
 .title {
-  @extend %dmsans-700;
+  font-weight: 700;
   text-align: center;
   font-size: 36px;
   line-height: 1.2;
-  margin-bottom: 21px;
   color: #191919;
-}
-.filter {
+  margin-bottom: 21px;
 
-  &__buttons {
-    text-align: center;
-    margin-bottom: 80px;
+  &--margin {
+    margin-bottom: 0;
+  }
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+
+  &__item {
+    margin-right: 27px;
   }
 
-  &__btn {
-    @extend %dmsans-700;
+  &__buttons {
+    font-weight: 700;
     color: #8b8b8b;
     padding: 0;
     background-color: transparent;
     border: none;
-    margin-right: 27px;
     cursor: pointer;
     outline: transparent;
+    &:last-child {
+      margin-right: 0;
+    }
+    @extend%animation-link;
   }
 
-  &__btn:last-child {
-    margin-right: 0;
-  }
-
-  &__btn:focus {
-    color: $focus-color;
-  }
-
-  &__btn:hover {
-    color: #a3bbc8;
-  }
-
-  &__btn:active {
-    color: red;
-  }
+  
 }
 
 .sr-only {
@@ -108,4 +96,159 @@ main .button:active {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  z-index: 2;
+  color: $user-color;
+  background-color: #edf1f4;
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+
+  & svg {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+  }
+
+  &--search {
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+
+  &--search path {
+    transition: fill 0.3s ;
+  }
+
+  &--color {
+    background-color: $btn-color;
+  }
+
+  @extend%animation;
+
+  &:hover {
+    background-color: #edf1f4;;
+  }
+
+  &--color:hover {
+    background-color: $btn-color;
+  }
+
+  &:hover svg {
+    transform: scale(1.2);
+  }
+
+  &--search:hover {
+    background-color: $btn-color;
+    transform: scale(1);
+  }
+
+  &--search:hover path {
+    fill: #fff;
+  }
+
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.icon-figure {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  z-index: 2;
+  color: $user-color;
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  padding: 0 38px;
+
+  & svg {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+
+  &--position  {
+    background-color: #fff;
+    transition: background-color 0.3s;
+    padding: 0;
+  }
+
+  &--position svg {
+    top: 15px;
+    right: 15px;
+  }
+
+  @extend%animation;
+
+  &--position path {
+    transition: fill 0.3s;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $user-color;
+  }
+
+  &--position:hover {
+    background-color: $btn-color;
+  }
+
+  &:hover svg{
+    transform: scale(1.2);
+  }
+
+  &--position:hover path {
+    fill: #fff;
+  }
+
+}
+
+.subscribe {
+  display: flex;
+
+  &__email {
+    width: 170px;
+    height: 40px;
+    background-color: #fef7f0;
+    border: none;
+    margin-right: -4px;
+    transition: background-color 0.3s;
+    outline: transparent;
+    @extend%animation;
+  }
+  
+  &__email::placeholder {
+    font-size: 12px;
+    padding-left: 15px;
+  }
+
+  &__btn {
+    width: 100px;
+    font-weight: 400;
+    background-color: $btn-color;
+    border: none;
+    color: #fff;
+    transition: color 0.3s, background-color 0.3s;
+    outline: transparent;
+    cursor: pointer;
+    @extend%animation;
+  }
+  
 }

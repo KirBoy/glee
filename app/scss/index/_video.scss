@@ -1,0 +1,36 @@
+.video {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 501px;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: transparent;
+
+    & svg {
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: $btn-color;
+      top: 40%;
+      right: 48%;
+      border-radius: 50%;
+      transform: translateX(10px);
+      transition: background-color 0.3s;
+      @extend%animation;
+    }
+  }
+}

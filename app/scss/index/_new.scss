@@ -1,0 +1,9 @@
+.new {
+  padding-top: 100px;
+  padding-bottom: 115px;
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px 35px;
+  }
+}

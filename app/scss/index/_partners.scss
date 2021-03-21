@@ -1,0 +1,19 @@
+.partners {
+  position: relative;
+
+  &__inner {
+    position: absolute;
+    top: -173px;
+    width: 100%;
+    background-color: $element-color;
+    min-height: 440px;
+    z-index: -1;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 95px 0;
+  }
+}
