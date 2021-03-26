@@ -25,33 +25,75 @@
     z-index: 2;
   }
 
+  &__slider {
+    z-index: 2;
+    max-height: 740px;
+  }
+
   &__title {
     font-family: "Rubik";
     font-weight: 500;
     font-size: 72px;
     text-transform: uppercase;
     color: $menu-color;
-    line-height: 0.972;
+    line-height: 1;
     margin-bottom: 30px;
     max-width: 420px;
-    @extend%line-clump;
+    @extend %line-clump;
     -webkit-line-clamp: 3;
     padding-top: 25px;
   }
 
-  &__text p {
-    font-size: 18px;
-    font-family: "Rubik";
-    font-weight: 400;
-    color: rgb(67, 99, 114);
-    line-height: 1.667;
-    max-width: 370px;
+  &__text {
+    max-height: 120px;
+    overflow: hidden;
     margin-bottom: 35px;
-    @extend%line-clump;
-  }
 
-  &__photo {
-    max-width: 640px;
-    max-height: 440px;
+    p {
+      font-size: 18px;
+      font-family: "Rubik";
+      font-weight: 400;
+      color: rgb(67, 99, 114);
+      line-height: 1.667;
+      max-width: 370px;
+      @extend %line-clump;
+      -webkit-line-clamp: 4;
+    }
+
+    &__photo {
+      max-width: 640px;
+      max-height: 440px;
+    }
   }
+}
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  right: 44%;
+  bottom: -6%;
+
+  button {
+    font-family: "Rubik";
+    font-weight: 500;
+    font-size: 11px;
+    background-color: #fde3cc;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline: transparent;
+    @extend %animation;
+  }
+}
+
+.slick-active button {
+  background-color: #fff;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
 }

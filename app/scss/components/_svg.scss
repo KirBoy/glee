@@ -1,0 +1,14 @@
+.svg {
+  fill: $btn-color;
+  width: 20px;
+  height: 20px;
+
+  &--play {
+    width: 28px;
+    height: 28px;
+  }
+
+  &--user {
+    fill: $user-color;
+  }
+}

@@ -4,17 +4,19 @@
 @import "libs";
 @import "global";
 
+@import "components/svg";
 @import "components/header";
+@import "components/card";
+@import "components/decor-card";
+@import "components/mix";
+@import "components/new";
+@import "components/footer";
+
 @import "index/wrapper";
-@import "components/slick";
 @import "index/benifits";
 @import "index/products";
-@import "components/card";
-@import "components/mix";
 @import "index/new";
-@import "components/new";
 @import "index/video";
 @import "index/news";
 @import "index/partners";
-@import "components/footer";
 

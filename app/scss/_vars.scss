@@ -17,6 +17,10 @@ $news-color: #262626;
 }
 
 %animation {
+  outline: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+
   &:focus {
     background-color: $focus-color;
   }

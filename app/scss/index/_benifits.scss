@@ -15,48 +15,59 @@
     background-color: #fef7f0;
     height: 170px;
     border-right: 1px solid #e8e4df;
+
+    &:last-child {
+      border-right: none;
+    }
   }
 
-  &__item:last-child {
-    border-right: none;
-  }
-
-  &__content::after {
-    content: "";
-    position: absolute;
-    left: 18%;
-    top: 28%;
-  }
-
-  &__content--support::after {
-    background-image: url(../images/benefits/support.svg);
-    width: 50px;
-    height: 50px;
-  }
-
-  &__content--delivery::after {
-    background-image: url(../images/benefits/delivery.svg);
-    width: 49px;
-    height: 29px;
-    top: 37%;
-  }
-
-  &__content--secure::after {
-    background-image: url(../images/benefits/secure.svg);
-    width: 49px;
-    height: 44px;
+  &__content {
+    width: 100%;
+    max-width: 220px;
   }
 
   &__title {
     font-weight: 500;
     font-size: 18px;
-    @extend%line-clump;
+    @extend %line-clump;
     -webkit-line-clamp: 1;
-    max-width: 200px;
   }
 
-  &__text p {
-    max-width: 220px;
-    @extend%line-clump;
+  &__text {
+
+    &--support::after {
+      content: "";
+      position: absolute;
+      left: 18%;
+      top: 28%;
+      background-image: url(../images/benefits/support.svg);
+      width: 50px;
+      height: 50px;
+    }
+
+    &--delivery::after {
+      content: "";
+      position: absolute;
+      left: 18%;
+      top: 28%;
+      background-image: url(../images/benefits/delivery.svg);
+      width: 49px;
+      height: 29px;
+      top: 37%;
+    }
+
+    &--secure::after {
+      content: "";
+      position: absolute;
+      left: 18%;
+      top: 28%;
+      background-image: url(../images/benefits/secure.svg);
+      width: 49px;
+      height: 44px;
+    }
+
+    p {
+      @extend %line-clump;
+    }
   }
 }

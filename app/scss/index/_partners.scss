@@ -11,9 +11,11 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     padding: 95px 0;
+  }
+
+  &__logo {
+    max-width: 225px;
+    max-height: 84px;
   }
 }

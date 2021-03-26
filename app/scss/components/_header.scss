@@ -2,13 +2,18 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding-top: 56px;
-    padding-bottom: 32px;
+    padding-top: 49px;
+    padding-bottom: 39px;
   }
 }
 
 .logo {
   margin-right: 159px;
+
+  &__icon {
+    max-width: 144px;
+    max-height: 40px;
+  }
 }
 
 .menu {
@@ -27,7 +32,7 @@
   }
 
   &__link {
-    font-family: "Rubik";
+    font-family: 'Rubik';
     font-weight: 500;
     text-decoration: none;
     color: $menu-color;

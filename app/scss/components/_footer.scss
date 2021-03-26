@@ -1,4 +1,8 @@
 .footer {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 14px;
+  color: $footer-color;
   padding-top: 63px;
 
   &__top {
@@ -51,37 +55,29 @@
 
   &__text p {
     display: inline;
-    font-family: "Rubik";
+    font-family: 'Rubik';
     font-weight: 400;
-    max-width: 270px;
-    font-size: 14px;
-    color: $footer-color;
     line-height: 1.7;
     margin-bottom: 9px;
-    @extend%line-clump;
+    @extend %line-clump;
   }
 
   &__text--desc {
-    margin-bottom: 20px;
+    display: block;
+    margin-bottom: 28px;
   }
 
   &__link {
-    font-family: "Rubik";
-    font-weight: 400;
-    font-size: 14px;
     color: $footer-color;
     text-decoration: none;
     @extend %line-clump;
     -webkit-line-clamp: 1;
-    @extend%animation-link;
+    @extend %animation-link;
     outline: transparent;
   }
 
   &__id {
     text-transform: uppercase;
-    font-family: "Rubik";
-    font-weight: 400;
-    color: $footer-color;
   }
 
   &__bottom {
@@ -91,8 +87,6 @@
   }
 
   &__copyright p {
-    font-family: "Rubik";
-    font-size: 14px;
     @extend %line-clump;
     -webkit-line-clamp: 1;
     max-width: 600px;

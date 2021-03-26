@@ -1,4 +1,5 @@
 const { src, dest, watch, parallel, series } = require('gulp');
+var gulp = require('gulp')
 const scss         = require('gulp-sass');
 const concat       = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
@@ -7,7 +8,8 @@ const imagemin     = require('gulp-imagemin');
 const del          = require('del');
 const browserSync  = require('browser-sync');
 const { notify }   = require('browser-sync');
-const svgSprirte   = require('gulp-svg-sprite')
+const svgSprirte   = require('gulp-svg-sprite');
+const gulpStylelint = require('gulp-stylelint');
 
 
 function browsersync() {
@@ -18,6 +20,16 @@ function browsersync() {
     notify: false
   })
 }
+
+function lintCss() {
+ 
+  return src('app/scss/**/*.scss')
+    .pipe(gulpStylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+};
 
 function styles() {
   return src('app/scss/style.scss')
@@ -61,17 +73,30 @@ function images() {
   .pipe(dest('dist/images'))
 }
 
-function svgsprirte() {
-  return src('app/images/**.svg')
+// function svgsprirte() {
+//   return src('app/images/**.svg')
+//   .pipe(svgSprirte({
+//     mode: {
+//       stack: {
+//         sprite: "../sprite.svg"
+//       }
+//     }
+//   }))
+//   .pipe(dest('app/images'))
+// }
+
+gulp.task('svgSprite', function() {
+  return gulp.src('app/images/**.svg')
   .pipe(svgSprirte({
-    mode: {
-      stack: {
-        sprite: "../sprite.svg"
-      }
-    }
-  }))
-  .pipe(dest('dist/images'))
-}
+        mode: {
+          stack: {
+            sprite: "../sprite.svg",
+            example: true
+          }
+        }
+      }))
+      .pipe(dest('app/images'))
+})
 
 function build() {
   return src([
@@ -101,6 +126,7 @@ exports.watching = watching;
 exports.images = images;
 exports.images = images;
 exports.build = series(cleanDist, images, build);
-exports.svgSprirte  = svgSprirte ;
+exports.svgSprirte  = svgSprirte;
+exports.lintCss  = lintCss;
 
 exports.default = parallel(styles, scripts, browsersync, svgSprirte, watching);

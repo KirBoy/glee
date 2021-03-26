@@ -1,4 +1,4 @@
-.card {
+.card-products {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,7 @@
     align-items: center;
     position: absolute;
     justify-content: center;
+    line-height: normal;
     top: 0;
     left: 0;
     right: 0;
@@ -22,47 +23,16 @@
     z-index: 2;
   }
 
+  &:hover &__add {
+    display: inline-block;
+  }
+
   &__add {
     display: none;
     position: relative;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
     margin-right: 15px;
-    transition: background-color 0.3s;
   }
 
-  &__add:hover {
-    background-color: $products-color;
-  }
-
-  &__add:focus &__link path {
-    fill: rgb(228, 11, 11);
-  }
-
-  &__add:hover &__link path {
-    fill: #fff;
-  }
-
-  &__add:active &__link path {
-    fill: rgb(255, 0, 0);
-  }
-
-  &__add:last-child {
-    margin-right: 0;
-  }
-
-  &__link {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    top: 13px;
-    left: 7px;
-  }
-
-  &__link path {
-    fill: $products-color;
-  }
 
   &__product {
     display: flex;
@@ -76,7 +46,7 @@
     color: #243f4d;
     font-size: 16px;
     max-width: 180px;
-    @extend%line-clump;
+    @extend %line-clump;
     -webkit-line-clamp: 1;
   }
 

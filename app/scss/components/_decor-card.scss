@@ -1,0 +1,54 @@
+.decor-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 390px;
+  background-color: #feefe2;
+
+  &__content {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    justify-content: center;
+    right: 15%;
+    bottom: 22%;
+  }
+
+  &__inner {
+    display: inline-block;
+    width: 350px;
+  }
+
+  &__photo {
+    overflow: visible;
+    max-width: 370px;
+    max-height: 490px;
+    margin-right: 20px;
+  }
+
+  &__name {
+    max-width: 350px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.231;
+    color: $user-color;
+    margin-bottom: 15px;
+    @extend %line-clump;
+  }
+
+  &__desc {
+    max-height: 90px;
+    overflow: hidden;
+    margin-bottom: 27px;
+    
+    p {
+      max-width: 350px;
+      font-family: 'Rubik';
+      font-weight: 400;
+      color: $user-color;
+      @extend %line-clump;
+      -webkit-line-clamp: 3;
+    }
+  }
+}
