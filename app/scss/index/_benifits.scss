@@ -38,8 +38,8 @@
     &::before {
       position: absolute;
       content: "";
-      left: 18%;
-      top: 28%;
+      left: -34%;
+      top: -40%;
     }
     &--support::before {
       background-image: url(../images/benefits/support.svg);
@@ -51,7 +51,6 @@
       background-image: url(../images/benefits/delivery.svg);
       width: 49px;
       height: 29px;
-      top: 37%;
     }
 
     &--secure::before {
