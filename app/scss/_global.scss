@@ -1,5 +1,5 @@
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   color: #585858;
   line-height: 1.875;
@@ -21,7 +21,7 @@ body {
   display: inline-block;
   position: relative;
   background-color: $btn-color;
-  font-family: 'Rubik';
+  font-family: "Rubik";
   color: #fff;
   border: 0;
   min-width: 200px;
@@ -121,10 +121,21 @@ body {
   border: none;
   border-radius: 50%;
 
+  @media (max-width: 576.98px) {
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+  }
+
   svg {
     position: absolute;
     top: 14px;
     right: 14px;
+
+    @media (max-width: 576.98px) {
+      top: 6px;
+      right: 30px;
+    }
   }
 
   path {
