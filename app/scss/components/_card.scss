@@ -5,11 +5,6 @@
   align-items: center;
   text-align: center;
 
-  &__photo {
-    max-width: 250px;
-    max-height: 270px;
-  }
-
   &__list {
     display: flex;
     align-items: center;
@@ -31,8 +26,11 @@
     display: none;
     position: relative;
     margin-right: 15px;
-  }
 
+    @include _979 {
+      display: block;
+    }
+  }
 
   &__product {
     display: flex;
@@ -40,6 +38,24 @@
     justify-content: center;
     width: 270px;
     height: 290px;
+
+    @include _767 {
+      max-width: 260px;
+      padding-top: 20px;
+    }
+
+    @include _414 {
+      height: 220px;
+    }
+  }
+
+  &__photo {
+    max-width: 240px;
+    max-height: 195px;
+
+    @include _414 {
+      max-width: 160px;
+    }
   }
 
   &__subtitle {

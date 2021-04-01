@@ -3,6 +3,10 @@
     display: flex;
     width: 100%;
     align-items: center;
+
+    @include _767 {
+      display: block;
+    }
   }
 
   &__item {
@@ -18,11 +22,20 @@
     &:last-child {
       border-right: none;
     }
+
+    @include _767 {
+      width: 100%;
+      height: 150px;
+    }
   }
 
   &__content {
     width: 100%;
     max-width: 220px;
+
+    @include _1199 {
+      max-width: 182px;
+    }
   }
 
   &__title {
@@ -30,6 +43,10 @@
     font-size: 18px;
     @extend %line-clump;
     -webkit-line-clamp: 1;
+
+    @include _1199 {
+      font-size: 17px;
+    }
   }
 
   &__text {
@@ -40,23 +57,53 @@
       content: "";
       left: -34%;
       top: -40%;
+
+      @include _979 {
+        display: none;
+      }
+
+      @include _767 {
+        display: block;
+      }
+
+      @include _567 {
+        left: -40px;
+      }
     }
     &--support::before {
       background-image: url(../images/benefits/support.svg);
       width: 50px;
       height: 50px;
+
+      @include _567 {
+        background-image: url(../images/benefits/support-ad.svg);
+        width: 27px;
+        height: 27px;
+      }
     }
 
     &--delivery::before {
       background-image: url(../images/benefits/delivery.svg);
       width: 49px;
       height: 29px;
+
+      @include _567 {
+        background-image: url(../images/benefits/delivery-ad.svg);
+        width: 31px;
+        height: 21px;
+      }
     }
 
     &--secure::before {
       background-image: url(../images/benefits/secure.svg);
       width: 49px;
       height: 44px;
+
+      @include _567 {
+        background-image: url(../images/benefits/secure-ad.svg);
+        width: 27px;
+        height: 24px;
+      }
     }
 
     p {

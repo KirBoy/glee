@@ -1,4 +1,3 @@
-
 $menu-color: #436372;
 $element-color: #fcd7b6;
 $user-color: #243f4d;
@@ -18,7 +17,6 @@ $news-color: #262626;
 
 %animation {
   outline: transparent;
-  cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
 
   &:focus {
@@ -36,20 +34,39 @@ $news-color: #262626;
   }
 }
 
+%animation-circle {
+  outline: transparent;
+  transition: background-color 0.2s;
+
+  &:focus {
+    background-color: $focus-color;
+  }
+
+  &:hover {
+    background-color: $btn-color;
+  }
+
+  &:active {
+    background-color: red;
+  }
+}
+
 %animation-link {
+  outline: transparent;
+  transition: color 0.2s;
+
   &:focus {
     color: $focus-color;
   }
 
   &:hover {
-    color: $btn-color
+    color: $btn-color;
   }
 
   &:active {
     color: red;
   }
 }
-
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
@@ -58,4 +75,3 @@ $news-color: #262626;
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
-

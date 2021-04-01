@@ -1,28 +1,49 @@
 .design-card {
+  display: inline-block;
+  width: 100%;
   max-width: 370px;
   min-height: 246px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center left;
+
+  @include _567 {
+    max-width: 300px;
+    min-height: 200px;
+  }
 
   &__decs {
     font-weight: 700;
     line-height: 1;
+    text-align: left;
     padding: 42px 40px;
     border-radius: 5px;
   }
 
   &__subtitle {
-    font-size: 20px;
     max-width: 180px;
+    font-size: 20px;
     margin-bottom: 20px;
     color: #191919;
     @extend %line-clump;
+
+    @include _979 {
+      font-size: 18px;
+    }
+
+    @include _567 {
+      font-size: 15px;
+      max-width: 140px;
+    }
   }
 
   &__type {
     max-width: 60px;
     color: #a3bbc8;
     @extend %line-clump;
+
+    @include _567 {
+      font-size: 14px;
+    }
   }
 }

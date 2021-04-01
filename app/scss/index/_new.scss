@@ -1,13 +1,62 @@
 .new {
   padding-top: 100px;
   padding-bottom: 119px;
+
+  @include _979 {
+    padding-bottom: 100px;
+  }
+
+  @include _567 {
+    padding-bottom: 70px;
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px 35px;
+
+    @include _1199 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include _767 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    &:nth-child(odd) {
+      text-align: right;
+    }
+
+    @include _767 {
+      &:nth-child(odd) {
+        text-align: center;
+      }
+
+      text-align: center;
+    }
   }
 
   &__link {
-    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    max-width: 370px;
+    border: 1px solid transparent;
+    border-color: transparent;
+    outline: transparent;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $focus-color;
+    }
+
+    &:hover {
+      border-color: $user-color;
+    }
+
+    &:active {
+      border-color: red;
+    }
   }
 }

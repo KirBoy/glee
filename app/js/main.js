@@ -10,6 +10,28 @@ $(function () {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 979,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+
+      {
+        breakpoint: 567,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
   $('.icon, .menu__link').on('click', function () {

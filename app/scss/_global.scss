@@ -21,13 +21,13 @@ body {
   display: inline-block;
   position: relative;
   background-color: $btn-color;
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   color: #fff;
   border: 0;
   min-width: 200px;
   padding: 16px 16px 16px 30px;
   text-align: left;
-  cursor: pointer;
+
   transition: color 0.3s, background-color 0.3s;
   outline: transparent;
   text-decoration: none;
@@ -43,6 +43,14 @@ body {
     top: 27px;
   }
 
+  @include _567 {
+    padding: 10px 16px 10px 30px;
+  }
+
+  @include _414 {
+    padding: 10px 16px 10px 30px;
+  }
+
   &--decor {
     font-size: 15px;
     min-width: 182px;
@@ -53,6 +61,10 @@ body {
     padding-left: 19px;
     background-color: transparent;
     margin-bottom: 12px;
+
+    @include _567 {
+      min-width: 182px;
+    }
 
     &::after {
       background-image: url(../images/arrow-btn-products.svg);
@@ -67,8 +79,16 @@ body {
   line-height: 1.2;
   color: #191919;
 
+  @include _567 {
+    font-size: 30px;
+  }
+
   &--margin {
     margin-bottom: 21px;
+
+    @include _567 {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -78,8 +98,18 @@ body {
   justify-content: center;
   margin-bottom: 70px;
 
+  @include _567 {
+    display: block;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
   &__item {
     margin-right: 27px;
+
+    @include _567 {
+      margin-right: 0;
+    }
   }
 
   &__buttons {
@@ -88,12 +118,16 @@ body {
     padding: 0;
     background-color: transparent;
     border: none;
-    cursor: pointer;
-    outline: transparent;
     &:last-child {
       margin-right: 0;
     }
     @extend %animation-link;
+
+    @include _567 {
+      width: 100%;
+      padding: 12px 0;
+      line-height: normal;
+    }
   }
 }
 
@@ -121,7 +155,7 @@ body {
   border: none;
   border-radius: 50%;
 
-  @media (max-width: 576.98px) {
+  @include _567 {
     width: 80px;
     height: 30px;
     border-radius: 30px;
@@ -132,7 +166,7 @@ body {
     top: 14px;
     right: 14px;
 
-    @media (max-width: 576.98px) {
+    @include _567 {
       top: 6px;
       right: 30px;
     }
@@ -142,23 +176,32 @@ body {
     transition: fill 0.3s;
   }
 
-  &:hover {
-    background-color: $btn-color;
-
-    .svg {
-      fill: #fff;
-    }
+  &:hover .svg {
+    fill: #fff;
   }
 
   &--mod {
     background-color: #fff;
+    border: 1px solid $btn-color;
+
+    @include _567 {
+      width: 50px;
+      height: 50px;
+    }
+
+    svg {
+      @include _567 {
+        top: 14px;
+        right: 14px;
+      }
+    }
 
     &:hover svg {
       fill: #fff;
     }
   }
 
-  @extend %animation;
+  @extend %animation-circle;
 
   &:last-child {
     margin-right: 0;
@@ -170,10 +213,8 @@ body {
   display: block;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  text-align: center;
+  border-radius: 20px;
   z-index: 2;
-  color: $user-color;
   background-color: transparent;
   border: none;
   padding: 0 38px;
@@ -184,10 +225,8 @@ body {
     right: 30px;
   }
 
-  @extend %animation;
-
   &:hover {
-    background-color: transparent;
+    @extend %animation-circle;
 
     .svg--user {
       fill: #fff;
@@ -195,28 +234,25 @@ body {
   }
 
   &--card {
-    width: 50px;
-    height: 50px;
+    border-radius: 50%;
     padding: 0;
     background-color: #fff;
+    border: 1px solid $btn-color;
     transition: background-color 0.3s;
 
     svg {
-      top: 15px;
-      right: 15px;
+      top: 14px;
+      right: 14px;
     }
 
     path {
       transition: fill 0.3s;
     }
 
-    &:hover {
-      background-color: $btn-color;
-
-      svg {
-        fill: #fff;
-      }
+    &:hover svg {
+      fill: #fff;
     }
+    @extend %animation-circle;
   }
 }
 
@@ -230,11 +266,11 @@ body {
     background-color: #fef7f0;
     border: none;
     @extend %animation;
-  }
 
-  &__email::placeholder {
-    padding-left: 15px;
-    font-size: 12px;
+    &::placeholder {
+      padding-left: 15px;
+      font-size: 12px;
+    }
   }
 
   &__btn {

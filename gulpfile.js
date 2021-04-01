@@ -10,6 +10,7 @@ const browserSync  = require('browser-sync');
 const { notify }   = require('browser-sync');
 const svgSprirte   = require('gulp-svg-sprite');
 const gulpStylelint = require('gulp-stylelint');
+const gcmq = require('gulp-group-css-media-queries');
 
 
 function browsersync() {
@@ -22,7 +23,6 @@ function browsersync() {
 }
 
 function lintCss() {
- 
   return src('app/scss/**/*.scss')
     .pipe(gulpStylelint({
       reporters: [
@@ -39,6 +39,7 @@ function styles() {
       overrideBrowserslist: ['last 10 versions'],
       grid: true
     }))
+    .pipe(gcmq())
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
@@ -73,17 +74,6 @@ function images() {
   .pipe(dest('dist/images'))
 }
 
-// function svgsprirte() {
-//   return src('app/images/**.svg')
-//   .pipe(svgSprirte({
-//     mode: {
-//       stack: {
-//         sprite: "../sprite.svg"
-//       }
-//     }
-//   }))
-//   .pipe(dest('app/images'))
-// }
 
 gulp.task('svgSprite', function() {
   return gulp.src('app/images/**.svg')

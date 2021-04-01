@@ -2,6 +2,7 @@
 @import "fonts";
 @import "reset";
 @import "libs";
+@import "media_mixin";
 @import "global";
 
 @import "components/svg";
@@ -10,6 +11,7 @@
 @import "components/decor-card";
 @import "components/mix";
 @import "components/new";
+@import "components/news-card";
 @import "components/footer";
 
 @import "index/wrapper";
@@ -19,4 +21,3 @@
 @import "index/video";
 @import "index/news";
 @import "index/partners";
-

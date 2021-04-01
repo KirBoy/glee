@@ -1,5 +1,5 @@
 .footer {
-  font-family: 'Rubik';
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: $footer-color;
@@ -10,6 +10,21 @@
     padding-bottom: 74px;
     border-bottom: 1px solid $btn-color;
     margin-bottom: 28px;
+
+    @include _979 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px;
+      padding-bottom: 45px;
+      margin-bottom: 25px;
+    }
+
+    @include _567 {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-bottom: 30px;
+      margin-bottom: 15px;
+    }
   }
 
   &__list {
@@ -48,23 +63,21 @@
 
   &__text {
     margin-bottom: 15px;
+    @extend %line-clump;
     &:last-child {
       margin-bottom: 0;
     }
-  }
 
-  &__text p {
-    display: inline;
-    font-family: 'Rubik';
-    font-weight: 400;
-    line-height: 1.7;
-    margin-bottom: 9px;
-    @extend %line-clump;
-  }
+    &--desc {
+      display: block;
+      margin-bottom: 28px;
+    }
 
-  &__text--desc {
-    display: block;
-    margin-bottom: 28px;
+    p {
+      display: inline;
+      line-height: 1.7;
+      margin-bottom: 9px;
+    }
   }
 
   &__link {
@@ -73,7 +86,6 @@
     @extend %line-clump;
     -webkit-line-clamp: 1;
     @extend %animation-link;
-    outline: transparent;
   }
 
   &__id {
@@ -84,12 +96,24 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 34px;
+
+    @include _979 {
+      padding-bottom: 25px;
+    }
+
+    @include _567 {
+      padding-bottom: 15px;
+    }
   }
 
   &__copyright p {
     @extend %line-clump;
     -webkit-line-clamp: 1;
     max-width: 600px;
+
+    @include _567 {
+      -webkit-line-clamp: 2;
+    }
   }
 
   &__items {
@@ -105,6 +129,10 @@
     &:last-child {
       border-right: none;
       padding-right: 0;
+    }
+
+    @include _767 {
+      display: none;
     }
   }
 }
