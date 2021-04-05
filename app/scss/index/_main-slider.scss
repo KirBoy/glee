@@ -1,6 +1,4 @@
-.wrapper {
-  padding-top: 143px;
-
+.main-slider {
   &__inner {
     height: 819px;
     overflow: hidden;
@@ -18,7 +16,7 @@
       height: 600px;
     }
 
-    @include _414 {
+    @include h_414 {
       height: 300px;
     }
   }
@@ -57,7 +55,7 @@
         top: 8%;
       }
 
-      @include _414 {
+      @include h_414 {
         width: 300px;
         height: 300px;
         right: -1%;
@@ -92,8 +90,8 @@
       padding: 50px 0;
     }
 
-    @include _414 {
-      padding: 20px 0;
+    @include h_414 {
+      padding: 25px 0;
       align-items: center;
     }
   }
@@ -105,7 +103,7 @@
   }
 
   &__title {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 500;
     font-size: 72px;
     text-transform: uppercase;
@@ -138,7 +136,7 @@
       word-break: break-all;
     }
 
-    @include _414 {
+    @include h_414 {
       max-width: 250px;
       padding-top: 0;
       margin-bottom: 10px;
@@ -148,13 +146,14 @@
 
   &__text {
     position: relative;
-    max-height: 120px;
-    overflow: hidden;
+    max-width: 370px;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    color: rgb(67, 99, 114);
+    line-height: 1.6;
+    @extend %line-clump;
+    -webkit-line-clamp: 4;
     margin-bottom: 35px;
-
-    @include _1199 {
-      max-height: 105px;
-    }
 
     @include _767 {
       margin-bottom: 15px;
@@ -164,21 +163,11 @@
       margin-bottom: 5px;
     }
 
-    @include _414 {
+    @include h_414 {
       margin-bottom: 15px;
-      max-height: 90px;
     }
 
     p {
-      font-size: 18px;
-      font-family: 'Rubik', sans-serif;
-      font-weight: 400;
-      color: rgb(67, 99, 114);
-      line-height: 1.6;
-      max-width: 370px;
-      @extend %line-clump;
-      -webkit-line-clamp: 4;
-
       @include _1199 {
         font-size: 16px;
       }
@@ -191,7 +180,7 @@
         font-size: 15px;
       }
 
-      @include _414 {
+      @include h_414 {
         font-size: 15px;
         max-width: 200px;
       }
@@ -223,7 +212,7 @@
       top: 34%;
     }
 
-    @include _414 {
+    @include h_414 {
       object-position: 0;
       max-width: 250px;
       right: 0;
@@ -242,7 +231,7 @@
   }
 
   button {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 500;
     font-size: 11px;
     background-color: #fde3cc;
@@ -251,7 +240,7 @@
     height: 28px;
     border-radius: 50%;
     margin-right: 12px;
-    
+
     transition: background-color 0.3s;
     outline: transparent;
     @extend %animation;

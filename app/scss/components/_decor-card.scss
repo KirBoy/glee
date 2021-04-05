@@ -1,12 +1,15 @@
 .decor-card {
   position: relative;
   color: $user-color;
+  max-width: 740px;
   min-height: 390px;
   background-color: #feefe2;
 
   @include _1199 {
     min-height: 290px;
   }
+
+  
 
   &__content {
     display: flex;
@@ -82,31 +85,21 @@
   }
 
   &__desc {
-    max-height: 90px;
-    overflow: hidden;
+    font-family: "Rubik", sans-serif;
     margin-bottom: 27px;
+    @extend %line-clump;
+    -webkit-line-clamp: 3;
 
-    @include _567 {
-      height: 110px;
-      max-height: 100%;
+    @include _1440 {
+      font-size: 14px;
     }
 
-    p {
-      font-family: "Rubik", sans-serif;
-      @extend %line-clump;
-      -webkit-line-clamp: 3;
+    @include _767 {
+      word-break: break-all;
+    }
 
-      @include _1440 {
-        font-size: 14px;
-      }
-
-      @include _767 {
-        word-break: break-all;
-      }
-
-      @include _567 {
-        -webkit-line-clamp: 5;
-      }
+    @include _567 {
+      -webkit-line-clamp: 5;
     }
   }
 }

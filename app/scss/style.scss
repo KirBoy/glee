@@ -9,15 +9,20 @@
 @import "components/header";
 @import "components/card";
 @import "components/decor-card";
-@import "components/mix";
 @import "components/new";
 @import "components/news-card";
 @import "components/footer";
+@import "components/page-name";
+@import "components/breadcrumbs";
 
-@import "index/wrapper";
+@import "index/main-slider";
 @import "index/benifits";
 @import "index/products";
 @import "index/new";
 @import "index/video";
 @import "index/news";
 @import "index/partners";
+
+@import "about/mession";
+@import "about/numbers";
+@import "about/team";

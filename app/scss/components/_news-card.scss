@@ -1,4 +1,5 @@
 .news-card {
+  position: relative;
   overflow: hidden;
   border-radius: 5px;
   max-width: 374px;
@@ -18,9 +19,7 @@
     min-height: 325px;
   }
 
-  @include _414 {
-    display: flex;
-    align-items: flex-start;
+  @include h_414 {
     max-width: 550px;
     min-height: 230px;
   }
@@ -30,13 +29,24 @@
     height: 250px;
     object-fit: cover;
 
-    @include _414 {
+    @include h_414 {
       max-width: 270px;
       max-height: 230px;
     }
   }
 
   &__link {
+    display: inline-block;
+    text-decoration: none;
+    @extend %animation-card;
+
+    @include h_414 {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__btn {
     position: absolute;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
@@ -53,7 +63,7 @@
     left: 3%;
     @extend %animation;
 
-    @include _414 {
+    @include h_414 {
       left: 36%;
       top: 104%;
     }
@@ -66,26 +76,21 @@
     margin: 0 auto;
   }
 
-  &__info {
-    display: flex;
-
-    @include _567 {
-      padding-bottom: 10px;
-    }
-
-    @include _414 {
-      flex-direction: column;
-    }
-  }
-
-  &__text {
+  &__title {
     max-width: 315px;
     height: 109px;
-    margin-bottom: 17px;
-    overflow: hidden;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    @extend %line-clump;
+    -webkit-line-clamp: 3;
+    color: $news-color;
     border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 17px;
+    padding-top: 32px;
 
     @include _1199 {
+      padding-top: 25px;
       height: 100px;
     }
 
@@ -93,79 +98,64 @@
       margin-bottom: 10px;
     }
 
-    @include _414 {
+    @include _567 {
+      font-size: 16px;
+    }
+
+    @include h_414 {
+      -webkit-line-clamp: 4;
       height: 110px;
     }
+  }
 
-    p {
-      padding-top: 32px;
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 1.2;
-      color: $news-color;
-      @extend %line-clump;
-      -webkit-line-clamp: 3;
+  &__info {
+    display: flex;
+    padding-bottom: 20px;
 
-      @include _1199 {
-        padding-top: 25px;
-      }
+    @include _567 {
+      padding-bottom: 10px;
+      justify-content: space-between;
+    }
 
-      @include _567 {
-        font-size: 16px;
-      }
-
-      @include _414 {
-        -webkit-line-clamp: 4;
-      }
+    @include h_414 {
+      flex-direction: column;
+      padding-bottom: 0;
     }
   }
 
-  &__time {
-    position: relative;
-    width: 150px;
-    font-family: "Rubik", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: $news-color;
-    text-transform: uppercase;
-    padding-left: 23px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url(../../images/date.png);
-      width: 12px;
-      height: 13px;
-      top: 4px;
-      left: 5px;
-    }
-  }
-
-  &__by {
+  &__desc {
     position: relative;
     max-width: 150px;
-    margin-right: 30px;
+    width: 100%;
     font-family: "Rubik", sans-serif;
     font-size: 12px;
-    font-weight: 400;
     color: $news-color;
     text-transform: uppercase;
-    padding-left: 24px;
+    padding-left: 15px;
     @extend %line-clump;
     -webkit-line-clamp: 1;
 
-    &:last-child {
-      margin-right: 0;
+    @include _567 {
+      width: auto;
     }
 
     &::after {
-      content: "";
       position: absolute;
-      background-image: url(../../images/by.png);
+      content: "";
+      left: 0;
+      top: 3px;
+    }
+
+    &--time::after {
+      background-image: url(../../images/date.svg);
+      width: 12px;
+      height: 13px;
+    }
+
+    &--by::after {
+      background-image: url(../../images/by.svg);
       width: 11px;
       height: 13px;
-      top: 3px;
-      left: 7px;
     }
   }
 }

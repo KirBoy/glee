@@ -26,6 +26,12 @@
     @include _767 {
       width: 100%;
       height: 150px;
+      border-right: none;
+      border-bottom: 1px solid #e8e4df;
+
+      &:last-child {
+        border-bottom: none;
+      }
     }
   }
 

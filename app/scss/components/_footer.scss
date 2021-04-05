@@ -63,19 +63,27 @@
 
   &__text {
     margin-bottom: 15px;
+    line-height: 1.7;
     @extend %line-clump;
+
     &:last-child {
       margin-bottom: 0;
     }
 
+    @include _979 {
+      margin-bottom: 0;
+    }
+
     &--desc {
-      display: block;
       margin-bottom: 28px;
+
+      @include _979 {
+        margin-bottom: 10px;
+      }
     }
 
     p {
       display: inline;
-      line-height: 1.7;
       margin-bottom: 9px;
     }
   }
@@ -86,6 +94,11 @@
     @extend %line-clump;
     -webkit-line-clamp: 1;
     @extend %animation-link;
+
+    @include _979 {
+      padding: 13px 0;
+      line-height: normal;
+    }
   }
 
   &__id {
@@ -106,10 +119,10 @@
     }
   }
 
-  &__copyright p {
+  &__copyright {
+    max-width: 600px;
     @extend %line-clump;
     -webkit-line-clamp: 1;
-    max-width: 600px;
 
     @include _567 {
       -webkit-line-clamp: 2;

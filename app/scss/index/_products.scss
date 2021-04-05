@@ -28,7 +28,7 @@
       margin-bottom: 30px;
     }
 
-    @include _414 {
+    @include h_414 {
       margin-bottom: 40px;
     }
   }
@@ -57,7 +57,7 @@
       }
     }
 
-    @include _414 {
+    @include h_414 {
       height: 300px;
     }
   }

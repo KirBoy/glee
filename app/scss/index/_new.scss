@@ -37,26 +37,4 @@
       text-align: center;
     }
   }
-
-  &__link {
-    display: inline-block;
-    width: 100%;
-    max-width: 370px;
-    border: 1px solid transparent;
-    border-color: transparent;
-    outline: transparent;
-    transition: border-color 0.3s;
-
-    &:focus {
-      border-color: $focus-color;
-    }
-
-    &:hover {
-      border-color: $user-color;
-    }
-
-    &:active {
-      border-color: red;
-    }
-  }
 }

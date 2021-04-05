@@ -1,0 +1,30 @@
+.breadcrumbs {
+  &__list {
+    display: inline-flex;
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: "/";
+      opacity: 0.6;
+      position: absolute;
+      right: -3px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    opacity: 0.6;
+    color: #222933;
+    text-decoration: none;
+    padding: 13px 11px 14px 9px;
+    @extend %animation-link;
+  }
+}
