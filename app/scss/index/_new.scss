@@ -1,6 +1,6 @@
 .new {
   padding-top: 100px;
-  padding-bottom: 119px;
+  padding-bottom: 109px;
 
   @include _979 {
     padding-bottom: 100px;
@@ -13,7 +13,7 @@
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px 35px;
+    grid-gap: 25px 30px;
 
     @include _1199 {
       grid-template-columns: 1fr 1fr;

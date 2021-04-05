@@ -1,15 +1,13 @@
 .decor-card {
   position: relative;
   color: $user-color;
-  max-width: 740px;
+  max-width: 870px;
   min-height: 390px;
   background-color: #feefe2;
 
   @include _1199 {
     min-height: 290px;
   }
-
-  
 
   &__content {
     display: flex;
