@@ -1,0 +1,110 @@
+<header class="header">
+
+  <div class="container-outside">
+    <nav class="header__inner">
+
+      <a class="logo" href="#">
+        <img class="logo__icon" src="images/logo.png" alt="logo icon">
+      </a>
+
+      <div class="container">
+        <div class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Home +</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">About</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Services</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Pages +</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">News</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Contact</a>
+            </li>
+
+            <li class="menu__item">
+              <!--появляются при max-width 567px -->
+              <ul class="menu__list-circle">
+
+                <li class="menu__item-circle">
+                  <a class="icon icon--card" href="#">
+                    <span class="sr-only">see more of this product</span>
+                    <svg class="svg">
+                      <use xlink:href="images/sprite.svg#searchpr"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="menu__item-circle">
+                  <button class="icon icon--card" type="button">
+                    <span class="sr-only">add to your cart</span>
+                    <svg class="svg">
+                      <use xlink:href="images/sprite.svg#cartpr"></use>
+                    </svg>
+                  </button>
+                </li>
+
+                <li class="menu__item-circle">
+                  <button class="icon icon--card" type="button">
+                    <span class="sr-only">add to your favorites</span>
+                    <svg class="svg">
+                      <use xlink:href="images/sprite.svg#heartpr"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <ul class="user">
+
+        <li class="user__item user__item--search">
+          <a class="icon" href="#">
+            <span class="sr-only">open search</span>
+            <svg class="svg svg--user">
+              <use xlink:href="images/sprite.svg#search-user"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="user__figure">
+          <a class="icon-figure" href="#">
+            <span class="sr-only">see favorites</span>
+            <svg class="svg svg--user">
+              <use xlink:href="images/sprite.svg#heart-user"></use>
+            </svg>
+            <span class="user__num">0</span>
+          </a>
+          <a class="icon-figure" href="#">
+            <span class="sr-only">cart</span>
+            <svg class="svg svg--user">
+              <use xlink:href="images/sprite.svg#cart-user"></use>
+            </svg>
+            <span class="user__num">0</span>
+          </a>
+        </li>
+
+        <li class="user__item">
+          <button class="icon" href="#">
+            <span class="sr-only">show more</span>
+            <svg class="svg svg--user">
+              <use xlink:href="images/sprite.svg#menu-user"></use>
+            </svg>
+          </button>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+
+</header>
