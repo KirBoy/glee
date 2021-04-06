@@ -16,6 +16,14 @@ $ocen-color: #243f4d;
   text-overflow: clip;
 }
 
+%checkbox-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 %animation {
   outline: transparent;
   transition: background-color 0.3s, color 0.3s;

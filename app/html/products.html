@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+@@include('../html/parts/head.html', {
+"title": "Glee | Products Page"
+})
+
+<body>
+
+  @@include('../html/parts/header.html')
+
+  <main class="main">
+
+    <div class="page">
+      <h1 class="page-title">Product list 1</h1>
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="">Home</a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="">Product list 1</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog__inner">
+          <ul class="filter-catalog">
+
+            <li class="filter-catalog__item">
+              <div class="filter-category">
+                <h2 class="filter-title">category</h2>
+                <ul class="filter-category__list">
+
+                  <li class="filter-category__item">
+                    <form class="filter-category__form" action="#">
+                      <label class="filter-category__label">
+                        <input class="filter-category__input" type="checkbox">
+                        <span class="filter-category__name">Chair</span>
+                      </label>
+                    </form>
+                  </li>
+
+                  <li class="filter-category__item">
+                    <form class="filter-category__form" action="#">
+                      <label class="filter-category__label">
+                        <input class="filter-category__input" type="checkbox">
+                        <span class="filter-category__name">Table</span>
+                      </label>
+                    </form>
+                  </li>
+
+                  <li class="filter-category__item">
+                    <form class="filter-category__form" action="#">
+                      <label class="filter-category__label">
+                        <input class="filter-category__input" type="checkbox">
+                        <span class="filter-category__name">Lamp</span>
+                      </label>
+                    </form>
+                  </li>
+
+                  <li class="filter-category__item">
+                    <form class="filter-category__form" action="#">
+                      <label class="filter-category__label">
+                        <input class="filter-category__input" type="checkbox">
+                        <span class="filter-category__name">Watch</span>
+                      </label>
+                    </form>
+                  </li>
+
+                  <li class="filter-category__item">
+                    <form class="filter-category__form" action="#">
+                      <label class="filter-category__label">
+                        <input class="filter-category__input" type="checkbox">
+                        <span class="filter-category__name">Clock</span>
+                      </label>
+                    </form>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+
+            <li class="filter-catalog__item">
+              <div class="filter-price">
+                <h2 class="filter-title"></h2>
+              </div>
+            </li>
+
+            <li class="filter-catalog__item">
+              <div class="filter-brand">
+                <h2 class="filter-title"></h2>
+              </div>
+            </li>
+
+            <li class="filter-catalog__item">
+              <div class="filter-recent">
+                <h2 class="filter-title"></h2>
+              </div>
+            </li>
+
+          </ul>
+
+          <ul class="catalog__content">
+
+            <li class="catalog__item">
+              <article class="card-products">
+                <div class="card-products__product">
+                  <img class="card-products__photo" src="images/products/product1.png" alt="Chair">
+                </div>
+                <h3 class="card-products__subtitle">Wooden radio</h3>
+                <div class="card-products__price">29.00
+                  <span class="card-products__currency">$</span>
+                </div>
+                <ul class="card-products__list">
+
+                  <li class="card-products__add">
+                    <a class="icon icon--card" href="#">
+                      <span class="sr-only">see more of this product</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#searchpr"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your cart</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#cartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your favorites</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#heartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                </ul>
+              </article>
+            </li>
+
+            <li class="catalog__item">
+              <article class="card-products">
+                <div class="card-products__product">
+                  <img class="card-products__photo" src="images/products/product2.png" alt="Chair">
+                </div>
+                <h3 class="card-products__subtitle">Wooden radio</h3>
+                <div class="card-products__price">29.00
+                  <span class="card-products__currency">$</span>
+                </div>
+                <ul class="card-products__list">
+
+                  <li class="card-products__add">
+                    <a class="icon icon--card" href="#">
+                      <span class="sr-only">see more of this product</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#searchpr"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your cart</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#cartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your favorites</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#heartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                </ul>
+              </article>
+            </li>
+
+            <li class="products__item mix category-b">
+              <article class="card-products">
+                <div class="card-products__product">
+                  <img class="card-products__photo" src="images/products/product3.png" alt="Chair">
+                </div>
+                <h3 class="card-products__subtitle">Wooden radio</h3>
+                <div class="card-products__price">29.00
+                  <span class="card-products__currency">$</span>
+                </div>
+                <ul class="card-products__list">
+
+                  <li class="card-products__add">
+                    <a class="icon icon--card" href="#">
+                      <span class="sr-only">see more of this product</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#searchpr"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your cart</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#cartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your favorites</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#heartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                </ul>
+              </article>
+            </li>
+
+            <li class="products__item mix category-c">
+              <article class="card-products">
+                <div class="card-products__product">
+                  <img class="card-products__photo" src="images/products/product4.png" alt="Chair">
+                </div>
+                <h3 class="card-products__subtitle">Wooden radio</h3>
+                <div class="card-products__price">29.00
+                  <span class="card-products__currency">$</span>
+                </div>
+                <ul class="card-products__list">
+
+                  <li class="card-products__add">
+                    <a class="icon icon--card" href="#">
+                      <span class="sr-only">see more of this product</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#searchpr"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your cart</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#cartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your favorites</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#heartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                </ul>
+              </article>
+            </li>
+
+            <li class="products__item mix category-b">
+              <article class="card-products">
+                <div class="card-products__product">
+                  <img class="card-products__photo" src="images/products/product10.png" alt="Chair">
+                </div>
+                <h3 class="card-products__subtitle">Wooden radio</h3>
+                <div class="card-products__price">29.00
+                  <span class="card-products__currency">$</span>
+                </div>
+                <ul class="card-products__list">
+
+                  <li class="card-products__add">
+                    <a class="icon icon--card" href="#">
+                      <span class="sr-only">see more of this product</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#searchpr"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your cart</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#cartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your favorites</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#heartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                </ul>
+              </article>
+            </li>
+
+            <li class="products__item mix category-d">
+              <article class="card-products">
+                <div class="card-products__product">
+                  <img class="card-products__photo" src="images/products/product6.png" alt="Chair">
+                </div>
+                <h3 class="card-products__subtitle">Wooden radio</h3>
+                <div class="card-products__price">29.00
+                  <span class="card-products__currency">$</span>
+                </div>
+                <ul class="card-products__list">
+
+                  <li class="card-products__add">
+                    <a class="icon icon--card" href="#">
+                      <span class="sr-only">see more of this product</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#searchpr"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your cart</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#cartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your favorites</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#heartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                </ul>
+              </article>
+            </li>
+
+            <li class="products__item mix category-d">
+              <article class="card-products">
+                <div class="card-products__product">
+                  <img class="card-products__photo" src="images/products/product7.png" alt="Chair">
+                </div>
+                <h3 class="card-products__subtitle">Wooden radio</h3>
+                <div class="card-products__price">29.00
+                  <span class="card-products__currency">$</span>
+                </div>
+                <ul class="card-products__list">
+
+                  <li class="card-products__add">
+                    <a class="icon icon--card" href="#">
+                      <span class="sr-only">see more of this product</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#searchpr"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your cart</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#cartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your favorites</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#heartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                </ul>
+              </article>
+            </li>
+
+            <li class="products__item mix category-c">
+              <article class="card-products">
+                <div class="card-products__product">
+                  <img class="card-products__photo" src="images/products/product8.png" alt="Chair">
+                </div>
+                <h3 class="card-products__subtitle">Wooden radio</h3>
+                <div class="card-products__price">29.00
+                  <span class="card-products__currency">$</span>
+                </div>
+                <ul class="card-products__list">
+
+                  <li class="card-products__add">
+                    <a class="icon icon--card" href="#">
+                      <span class="sr-only">see more of this product</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#searchpr"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your cart</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#cartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="card-products__add">
+                    <button class="icon icon--card" type="button">
+                      <span class="sr-only">add to your favorites</span>
+                      <svg class="svg">
+                        <use xlink:href="images/sprite.svg#heartpr"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                </ul>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

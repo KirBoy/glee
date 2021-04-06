@@ -125,7 +125,9 @@ function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch('app/images/*.svg', svgSprirte);
-  watch(['app/**/*.html']).on('change', browserSync.reload)
+  watch('app/html/*.html', include);
+  watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch(['app/html/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;
