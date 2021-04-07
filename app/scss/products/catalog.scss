@@ -33,7 +33,7 @@
     @extend %checkbox-hidden;
 
     &:checked + .filter-category__name {
-      background-color: violet;
+      background-color: #edf1f4;
     }
   }
 
