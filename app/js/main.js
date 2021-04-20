@@ -1,8 +1,61 @@
 $(function () {
+
+
+  $('.catalog__select').styler();
+
+  $(".star").rateYo({
+    starWidth: "11px",
+    ratedFill: "#ffcc00",
+    normalFill: "#d6d6d6",
+    readOnly: true,
+    spacing: "7px",
+  });
+
+  $(".star-card").rateYo({
+    starWidth: "18px",
+    ratedFill: "#ffcc00",
+    normalFill: "#d6d6d6",
+    readOnly: true,
+    spacing: "13px",
+  });
+
+
+  $('.catalog__btn').on('click', function () {
+    $('.catalog__btn').removeClass('catalog__btn--active');
+    $(this).addClass('catalog__btn--active');
+  });
+
+  $('.catalog__list').on('click', function () {
+    $('.card-products').addClass('card-products--list');
+    $('.catalog__content').addClass('catalog__content--list');
+  });
+
+  $('.catalog__grid').on('click', function () {
+    $('.card-products').removeClass('card-products--list');
+    $('.catalog__content').removeClass('catalog__content--list');
+  });
+
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    step: 0.01,
+    onStart: function (data) {
+      $('.filter-price__num--from').text(data.from);
+      $('.filter-price__num--to').text(data.to);
+    },
+    onChange: function (data) {
+
+      $('.filter-price__num--from').text(data.from);
+      $('.filter-price__num--to').text(data.to);
+    },
+  });
+
   $('.main-slider__slider').slick({
     arrows: false,
     dots: true
   });
+
 
   $('.partners__list').slick({
     arrows: false,

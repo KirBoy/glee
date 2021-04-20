@@ -4,6 +4,7 @@ const scss = require('gulp-sass');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync');
@@ -69,10 +70,13 @@ function scripts() {
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.min.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/rateyo/src/jquery.rateyo.js',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
 }
@@ -140,5 +144,6 @@ exports.build = series(cleanDist, images, build);
 exports.svgSprirte = svgSprirte;
 exports.include = include;
 exports.lintCss = lintCss;
+
 
 exports.default = parallel(include, styles, scripts, browsersync, svgSprirte, watching);
